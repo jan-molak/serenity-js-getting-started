@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "chai": "registry:npm/chai#3.5.0+20160723033700",
+    "chai-as-promised": "registry:npm/chai-as-promised#5.1.0+20160310030142"
+  },
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160725163759",
+    "node": "registry:dt/node#6.0.0+20160906151955",
+    "promises-a-plus": "registry:dt/promises-a-plus#0.0.0+20160317120654"
+  },
+  "globalDevDependencies": {
+    "cucumber": "registry:dt/cucumber#0.0.0+20160620145537"
+  }
+}
