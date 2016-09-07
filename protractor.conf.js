@@ -1,5 +1,7 @@
 require('ts-node/register');
 
+var crew = require('serenity-js/lib/stage_crew');
+
 exports.config = {
 
     baseUrl: 'http://todomvc.com',
@@ -15,6 +17,14 @@ exports.config = {
         format:     'pretty',
         compiler:   'ts:ts-node/register'
     },
+
+    plugins: [{
+        path: 'node_modules/serenity-js/lib/serenity-protractor/plugin',
+        crew: [
+            crew.jsonReporter(),
+            crew.photographer()
+        ]
+    }],
 
     capabilities: {
         browserName: 'chrome',

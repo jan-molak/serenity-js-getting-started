@@ -1,5 +1,5 @@
-import { Actor } from 'serenity-js/lib/screenplay';
-import { BrowseTheWeb } from 'serenity-js/lib/screenplay-protractor';
+import { Serenity } from 'serenity-js';
+import { Actor, BrowseTheWeb } from 'serenity-js/lib/screenplay-protractor';
 import { protractor } from 'protractor/globals';
 
 import { Start } from '../../src/screenplay/tasks/start';
@@ -10,24 +10,24 @@ import { expect } from '../../src/expect';
 
 export = function todoUserSteps() {
 
-    let actor: Actor;
+    let stage = Serenity.callToStageFor({
+        actor: (name) => Actor.named(name).whoCan(BrowseTheWeb.using(protractor.browser))
+    });
 
     this.Given(/^.*that (.*) has a todo list containing (.*)$/, (name: string, items: string) => {
-
-        actor = Actor.named(name).whoCan(BrowseTheWeb.using(protractor.browser));
-
-        return actor.attemptsTo(
+        return stage.theActorCalled(name).attemptsTo(
             Start.withATodoListContaining(listOf(items))
         );
     });
 
     this.When(/^s?he adds (.*?) to (?:his|her) list$/, (itemName: string) => {
-        return actor.attemptsTo(
+        return stage.theActorInTheSpotlight().attemptsTo(
             AddATodoItem.called(itemName)
         )
     });
 
     this.Then(/^.* todo list should contain (.*?)$/, (items: string) => {
-        return expect(actor.toSee(TodoListItems.Displayed)).eventually.deep.equal(listOf(items))
+        return expect(stage.theActorInTheSpotlight().toSee(TodoListItems.Displayed))
+            .eventually.deep.equal(listOf(items))
     });
 };
