@@ -15,37 +15,33 @@ You'll also need access to the [command line interface](https://en.wikipedia.org
 The below code listings, which look like this one below, mean "type `whoami` into the command line":
 
 ```
-λ ~/ whoami
+$> whoami
 ```
-
-I'm using [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-with the [lambda theme](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/lambda.zsh-theme).
-That's how I got the fancy `λ` symbol. You're welcome ;-)
 
 ## Setup
 
 First, make sure that you have Node.js and NPM installed:
 
 ```
-λ ~/ node --version
+$> node --version
 v4.4.5
 ```
 ```
-λ ~/ npm --version
+$> npm --version
 2.15.5
 ```
 
 Next, [clone](https://help.github.com/articles/cloning-a-repository/) this project to your computer:
 
 ```
-λ ~/ git clone https://github.com/jan-molak/serenity-js-getting-started.git
-λ ~/ cd serenity-js-getting-started
+$> git clone https://github.com/jan-molak/serenity-js-getting-started.git
+$> cd serenity-js-getting-started
 ```
 
 Install the dependencies
 
 ```
-λ ~/serenity-js-getting-started/ npm install
+$> npm install
 ```
 
 And make sure that you can execute the acceptance tests using
@@ -53,7 +49,7 @@ And make sure that you can execute the acceptance tests using
 [Cucumber](https://github.com/cucumber/cucumber-js):
 
 ```
-λ ~/serenity-js-getting-started/ npm test
+$> npm test
 ```
 
 Calling the above command should give you output similar to the one below, notifying you of a pending step:
