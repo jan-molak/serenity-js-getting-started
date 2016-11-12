@@ -1,7 +1,7 @@
 import { PerformsTasks, Task } from 'serenity-js/lib/screenplay';
 import { Enter, step } from 'serenity-js/lib/screenplay-protractor';    // imports the @step
 
-import { protractor } from 'protractor/globals';
+import { protractor } from 'protractor';
 
 import { TodoList } from '../ui/todo_list';
 

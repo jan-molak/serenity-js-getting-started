@@ -1,6 +1,6 @@
 import { Serenity } from 'serenity-js';
 import { Actor, BrowseTheWeb } from 'serenity-js/lib/screenplay-protractor';
-import { protractor } from 'protractor/globals';
+import { protractor } from 'protractor';
 
 import { Start } from '../../src/screenplay/tasks/start';
 import { AddATodoItem } from '../../src/screenplay/tasks/add_a_todo_item';
