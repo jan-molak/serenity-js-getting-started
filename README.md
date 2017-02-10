@@ -1,11 +1,14 @@
-# New version of this tutorial available at [serenity-js/tutorial-from-scripts-to-serenity](https://github.com/serenity-js/tutorial-from-scripts-to-serenity)
+# New version available now!
 
 This tutorial was written for an early release of Serenity/JS.
-The new version, available at [serenity-js/tutorial-from-scripts-to-serenity](https://github.com/serenity-js/tutorial-from-scripts-to-serenity) covers Serenity/JS 1.x.
+
+The new version, covering Serenity/JS 1.x is available at [serenity-js/tutorial-from-scripts-to-serenity](https://github.com/serenity-js/tutorial-from-scripts-to-serenity).
 
 Find out more at [serenity-js.org](http://serenity-js.org)!
 
-# ~~Serenity/JS - Getting Started~~
+----
+
+# Serenity/JS - Getting Started
 
 This project acts as supplementary material for
 the [official Serenity/JS tutorial](https://github.com/jan-molak/serenity-js).
